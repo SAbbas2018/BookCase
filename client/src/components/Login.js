@@ -12,7 +12,7 @@ export default function Login() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const loginUser = { email, password };
+      //   const loginUser = { email, password };
       const loginRes = await Axios.post("http://localhost:5000/users/login", {
         email,
         password,
