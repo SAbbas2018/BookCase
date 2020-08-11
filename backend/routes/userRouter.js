@@ -32,7 +32,13 @@ router.post("/register", async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const passwordHash = await bcrypt.hash(password, salt);
     // Create a new user and save to db
-    const newUser = new User({ email, password: passwordHash, name });
+    const newUser = new User({
+      email,
+      password: passwordHash,
+      name,
+      library: [],
+      wishlist: [],
+    });
     const savedUser = await newUser.save();
     res.json(savedUser);
   } catch (err) {
@@ -122,7 +128,12 @@ router.post("/tokenIsValid", async (req, res) => {
 */
 router.get("/", auth, async (req, res) => {
   const user = await User.findById(req.user);
-  res.json({ name: user.name, id: user._id });
+  res.json({
+    name: user.name,
+    id: user._id,
+    library: user.library,
+    wishlist: user.wishlist,
+  });
 });
 
 module.exports = router;
