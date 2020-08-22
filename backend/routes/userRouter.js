@@ -75,6 +75,7 @@ router.post("/login", async (req, res) => {
       user: {
         id: user._id,
         name: user.name,
+        email: user.email,
         library: user.library,
         wishlist: user.wishlist,
       },
@@ -135,6 +136,7 @@ router.get("/", auth, async (req, res) => {
   const user = await User.findById(req.user);
   res.json({
     name: user.name,
+    email: user.email,
     id: user._id,
     library: user.library,
     wishlist: user.wishlist,
