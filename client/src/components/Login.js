@@ -39,7 +39,7 @@ export default function Login() {
           <input
             id="login-email"
             type="email"
-            class="form-control"
+            className="form-control"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -48,7 +48,7 @@ export default function Login() {
           <input
             id="login-password"
             type="password"
-            class="form-control"
+            className="form-control"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>

@@ -30,33 +30,45 @@ export default function Register() {
   };
   return (
     <div className="page">
-      <h3>Register</h3>
+      <h3 className="page-title">Register</h3>
       {errorM && (
         <ErrorNotice message={errorM} clearError={() => setError(undefined)} />
       )}
-      <form className="form" onSubmit={onSubmit}>
-        <label htmlFor="register-email">Email</label>
-        <input
-          id="register-email"
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <label htmlFor="register-password">Password</label>
-        <input
-          id="register-password"
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <label htmlFor="register-name">Name</label>
-        <input
-          id="register-name"
-          type="text"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <input type="submit" value="Register" />
+      <form className="register-form" onSubmit={onSubmit}>
+        <div className="form-group">
+          <label htmlFor="register-email">Email</label>
+          <input
+            id="register-email"
+            type="email"
+            className="form-control"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="register-password">Password</label>
+          <input
+            id="register-password"
+            type="password"
+            className="form-control"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="register-name">Name</label>
+          <input
+            id="register-name"
+            type="text"
+            className="form-control"
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            className="btn btn-primary btn-lg"
+            type="submit"
+            value="Register"
+          />
+        </div>
       </form>
     </div>
   );
