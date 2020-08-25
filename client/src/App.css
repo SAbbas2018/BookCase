@@ -1,3 +1,4 @@
+/* Margin: t r b l */
 /* Page styles */
 .page-title {
   margin: auto;
@@ -31,17 +32,18 @@
 
 /* Error Notice */
 .error-notice {
-  width: 40%;
   margin: auto;
   display: flex;
+  padding: 8px;
   justify-content: space-between;
 }
 .error-notice-message {
-  margin: auto;
+  margin: auto 8px;
   text-align: center;
 }
 .error-notice-button {
   border-radius: 10%;
+  margin: auto;
 }
 
 /* Home page when logged in */
@@ -50,4 +52,66 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+/* Library Container */
+.library-container {
+  display: flex;
+  flex-direction: column;
+  /* t r b l */
+  /* margin: 0 0 10px 0; */
+}
+.library-container form {
+  margin-top: 10px;
+}
+
+.main-homepage-container {
+  justify-content: center;
+  display: flex;
+  margin: 0 0 10px 0;
+}
+
+/* Book Container Styles */
+.books-container {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.book-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.book-cover {
+  width: 40%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  margin: auto;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 40%;
+}
+
+.book-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+}
+
+.book-title {
+  font-style: italic;
+}
+
+.button-container {
+  height: 10%;
+  margin: auto;
+  margin-right: auto;
+  margin-left: 3px;
 }

@@ -33,3 +33,5 @@ mongoose.connect(
 
 //Set up Routes for user auth
 app.use("/users", require("./routes/userRouter"));
+// Set up routes for library functions
+app.use("/home/library", require("./routes/libraryRouter"));
