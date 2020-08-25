@@ -37,3 +37,6 @@ app.use("/users", require("./routes/userRouter"));
 app.use("/home/library", require("./routes/libraryRouter"));
 // Set up routes for wishlist functions
 app.use("/home/wishlist", require("./routes/wishlistRouter"));
+
+// Set up routes for recommendations functions
+app.use("/home/recommendations", require("./routes/recommendationsRouter"));
