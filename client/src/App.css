@@ -1,18 +1,33 @@
 /* Margin: t r b l */
 /* Page styles */
 .page-title {
-  margin: auto;
-  padding: 8px 0;
+  /* margin: auto; */
+  /* padding: 8px 0; */
   width: 80%;
 }
 .login-form {
   width: 80%;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: auto;
+  margin-top: 10px;
 }
 .register-form {
   width: 80%;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: auto;
+  margin-top: 10px;
 }
+
+input[type="text"]::placeholder {
+  text-align: center;
+}
+/* .form-container {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
 
 /* Header */
 .header {
@@ -24,10 +39,21 @@
 }
 .header-logo {
   margin: auto 0 auto 0;
+  width: 33%;
 }
-
+.header-logo-item {
+  margin: 5px;
+}
 .header-title {
+  width: 33%;
+  text-align: center;
   margin: auto 0 auto 0;
+}
+.auth-buttons {
+  width: 33%;
+}
+.welcome-header {
+  text-align: center;
 }
 
 /* Error Notice */
@@ -53,6 +79,11 @@
   display: flex;
   flex-direction: column;
 }
+.component-title {
+  width: 80%;
+  margin: auto auto;
+  text-align: center;
+}
 /* Library Container */
 .library-container {
   display: flex;
@@ -77,9 +108,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .book-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: auto;
+  padding: 2px;
 }
 .book-cover {
   width: 40%;
@@ -110,8 +143,10 @@
 }
 
 .button-container {
-  height: 10%;
   margin: auto;
-  margin-right: auto;
-  margin-left: 3px;
+}
+
+.book-link {
+  margin: auto;
+  margin-top: 2px;
 }

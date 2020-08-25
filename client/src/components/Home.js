@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import LibraryClass from "./main/LibraryClass.js";
+import Wishlist from "./main/Wishlist.js";
 export default function Home() {
   const { userData } = useContext(UserContext);
   const history = useHistory();
@@ -23,10 +24,17 @@ export default function Home() {
       {userData.user && (
         <div className="main-homepage-container">
           <div className="library">
+            <h3 className="component-title">Library</h3>
             <LibraryClass />
           </div>
-          <div className="wishlist">b</div>
-          <div className="recommendation">c</div>
+          <div className="wishlist">
+            <h3 className="component-title">Wishlist</h3>
+            <Wishlist />
+          </div>
+          <div className="recommendation">
+            <h3 className="component-title">Recommendations</h3>
+            <p>...Under Construction</p>
+          </div>
         </div>
       )}
     </div>

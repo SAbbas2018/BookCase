@@ -35,3 +35,5 @@ mongoose.connect(
 app.use("/users", require("./routes/userRouter"));
 // Set up routes for library functions
 app.use("/home/library", require("./routes/libraryRouter"));
+// Set up routes for wishlist functions
+app.use("/home/wishlist", require("./routes/wishlistRouter"));

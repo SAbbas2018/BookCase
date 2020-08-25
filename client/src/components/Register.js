@@ -30,11 +30,11 @@ export default function Register() {
   };
   return (
     <div className="page">
-      <h3 className="page-title">Register</h3>
       {errorM && (
         <ErrorNotice message={errorM} clearError={() => setError(undefined)} />
       )}
       <form className="register-form" onSubmit={onSubmit}>
+        <h3 className="page-title">Register</h3>
         <div className="form-group">
           <label htmlFor="register-email">Email</label>
           <input
@@ -64,7 +64,7 @@ export default function Register() {
         </div>
         <div className="form-group">
           <input
-            className="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg btn-block"
             type="submit"
             value="Register"
           />

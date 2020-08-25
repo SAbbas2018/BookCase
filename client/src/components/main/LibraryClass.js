@@ -25,7 +25,6 @@ export default class LibraryClass extends Component {
         ...prevState,
         lib: userData.user.library,
         userEmail: userData.user.email,
-        userData: userData,
       };
     });
   }
@@ -48,7 +47,7 @@ export default class LibraryClass extends Component {
 
   bookRemoved(name) {
     let newLib = this.state.lib.filter((book) => {
-      return book.bookTitle != name;
+      return book.bookTitle !== name;
     });
     this.setState((prevState) => {
       return {
@@ -70,7 +69,9 @@ export default class LibraryClass extends Component {
       );
       const { book } = getBook.data;
       // Add book to userData.user.library and make post req to add to db
-      let library = [...this.state.lib];
+      let library = this.state.lib.filter((item) => {
+        return item.bookTitle !== book.bookTitle;
+      });
       library.push(book);
       this.setState((prevState) => {
         return {
@@ -114,7 +115,7 @@ export default class LibraryClass extends Component {
             </div>
             <div className="form-group">
               <input
-                className="btn btn-primary btn-sm"
+                className="btn btn-primary btn-sm btn-block"
                 type="submit"
                 value="Add Book"
               />

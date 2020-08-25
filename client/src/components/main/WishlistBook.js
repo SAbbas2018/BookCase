@@ -1,9 +1,10 @@
 import React from "react";
 import Axios from "axios";
-function Book(props) {
+function WishlistBook(props) {
   const book = props.book;
   const email = props.email;
   const bookTitle = book.bookTitle;
+  const { bookLink } = book;
   const onClick = async (e) => {
     try {
       //   console.log(bookTitle, email);
@@ -15,7 +16,7 @@ function Book(props) {
       // so I resorted to just using a post request since
       // thats been working fine
       await Axios.post(
-        "http://localhost:5000/home/library/deleteBook",
+        "http://localhost:5000/home/wishlist/deleteBook",
         { bookTitle, email: email },
         {
           headers: { "Content-Type": "application/JSON" },
@@ -32,6 +33,14 @@ function Book(props) {
       <div className="book-info">
         <p className="book-title">{book.bookTitle}</p>
         <p>{book.bookAuthor}</p>
+        <a
+          href={bookLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="book-link"
+        >
+          <i className="fab fa-google"></i>
+        </a>
       </div>
       <div className="button-container">
         <button
@@ -46,4 +55,4 @@ function Book(props) {
   );
 }
 
-export default Book;
+export default WishlistBook;

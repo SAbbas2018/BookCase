@@ -29,11 +29,12 @@ export default function Login() {
   };
   return (
     <div className="page">
-      <h3 className="page-title">Login</h3>
+      {/* <h3 className="page-title">Login</h3> */}
       {errorM && (
         <ErrorNotice message={errorM} clearError={() => setError(undefined)} />
       )}
       <form className="login-form" onSubmit={onSubmit}>
+        <h3 className="page-title">Login</h3>
         <div className="form-group">
           <label htmlFor="login-email">Email</label>
           <input
@@ -54,7 +55,7 @@ export default function Login() {
         </div>
         <div className="form-group">
           <input
-            className="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg btn-block"
             type="submit"
             value="Login"
           />
