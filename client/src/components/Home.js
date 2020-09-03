@@ -7,6 +7,7 @@ import Recommendation from "./main/Recommendation.js";
 export default function Home() {
   const { userData } = useContext(UserContext);
   const history = useHistory();
+  // const [update, setUpdate] = useState(false);
   useEffect(() => {
     if (!userData.user) history.push("/login");
   }, [userData, history]);
@@ -34,7 +35,7 @@ export default function Home() {
           </div>
           <div className="recommendation">
             <h3 className="component-title">Recommendations</h3>
-            <Recommendation />
+            <Recommendation props={userData.user.lib} />
           </div>
         </div>
       )}
